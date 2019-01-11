@@ -13,6 +13,8 @@
     ga('send', 'pageview');
   
   </script>
+  <script type="text/javascript" src="external_script.js"></script>
+  <link rel="stylesheet" href="style.css" type="text/css">
   </head>
   <body>
     <header>
@@ -58,7 +60,7 @@
         
         <h2 id = "directions">Directions</h2>
         <ol>
-            <li>Preheat oven to 350oF (175o C)</li>
+            <li>Preheat oven to 350&degF (175&degC)</li>
             <li>Melt butter in the microwave or on the stovetop.</li>
             <li>Lightly grease a 9x13 baking dish with the paper from the butter.</li>
             <li>Combine the melted butter, sugar, and vanilla in a large bowl.</li>
@@ -70,28 +72,33 @@
             <li>Bake for 35-40 minutes.</li>
         </ol>
     </section>
-    <section>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name">
-            <label for="rating">Rating</label>
-            <input type="radio" name="rating">1</input>
-            <input type="radio" name="rating">2</input>
-            <input type="radio" name="rating">3</input>
-            <input type="radio" name="rating">4</input>
-            <input type="radio" name="rating">5</input>
-            <label for="cooking experience">Cooking Experience</label>
-            <select id="cooking experience" >
+    <section id = "reviews">
+        <form id = "review-form">
+            <label for="name">Name: </label>
+            <input type="text" id="name">   
+            <br>
+            <label for="rating">Rating: </label>
+            <input type="radio" name="rating" value = 1>1</input>
+            <input type="radio" name="rating" value = 2>2</input>
+            <input type="radio" name="rating" value = 3>3</input>
+            <input type="radio" name="rating" value = 4>4</input>
+            <input type="radio" name="rating" value = 5>5</input>
+            <br>
+            <label for="cooking experience">Cooking Experience:</label>
+            <select id="expertise" >
                 <option value="" disabled='true' selected='true'>Select Cooking Expertise</option>
                 <option value="Sometimes Cook">Sometimes Cook</option>
                 <option value="Cook Everyday">Cook Everyday</option>
                 <option value="Cooking is a Hobby">Cooking is a Hobby</option>
                 <option value="Professional Chef">Professional Chef</option>
             </select>
-            <label for="review">Review  
-                <textarea></textarea>
+            <br>
+            <label>Review:  
+                <br>
+                <textarea id = "review" cols = '30' rows = '10'></textarea>
             </label>
-           
+            <br>
+            <input type="submit" value="Submit Review">
         </form>
     </section>
     <footer>
